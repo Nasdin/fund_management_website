@@ -8,7 +8,7 @@ User = settings.AUTH_USER_MODEL
 
 
 class Deposit(models.Model):
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     amount = models.DecimalField(
       decimal_places=2,
       max_digits=12,
@@ -23,7 +23,7 @@ class Deposit(models.Model):
 
 
 class Withdrawal(models.Model):
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     amount = models.DecimalField(
       decimal_places=2,
       max_digits=12,
@@ -38,7 +38,7 @@ class Withdrawal(models.Model):
 
 
 class Interest(models.Model):
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     amount = models.DecimalField(
       decimal_places=2,
       max_digits=12,
