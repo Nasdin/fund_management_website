@@ -1,16 +1,15 @@
-import datetime
 from django import forms
 from django.contrib.auth import authenticate
 from django.contrib.auth.forms import UserCreationForm
-from django.forms.extras.widgets import SelectDateWidget
+from django.forms import SelectDateWidget
 
 from .models import User
 
 
 class UserRegistrationForm(UserCreationForm):
     birth_date = forms.DateField(
-      widget=SelectDateWidget(years=range(1940, 2010))
-      )
+        widget=SelectDateWidget(years=range(1940, 2010))
+    )
 
     class Meta:
         model = User

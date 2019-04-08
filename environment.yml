@@ -1,9 +1,0 @@
-name:fund_management_website
-channels:
-  - conda-forge
-  - defaults
-dependencies:
-  - amqp
-  - billiard
-  - django=2.2
-  - python=3.7

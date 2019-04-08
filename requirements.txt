@@ -1,0 +1,5 @@
+amqp
+billiard
+django==2.2
+django-crispy-forms
+pillow
