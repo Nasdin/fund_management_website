@@ -37,7 +37,7 @@ class Withdrawal(models.Model):
         return str(self.user)
 
 
-class Interest(models.Model):
+class Returns(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     amount = models.DecimalField(
       decimal_places=2,

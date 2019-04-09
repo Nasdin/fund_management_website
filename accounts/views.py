@@ -15,7 +15,7 @@ def register_view(request):  # Creates a New Account & login New users
     if request.user.is_authenticated:
         return redirect("home")
     else:
-        title = "Create a Bank Account"
+        title = "Create a AYPE Account"
         form = UserRegistrationForm(
             request.POST or None,
             request.FILES or None
